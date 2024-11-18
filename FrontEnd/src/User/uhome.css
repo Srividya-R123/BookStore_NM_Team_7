@@ -1,0 +1,209 @@
+#uhome{
+    height: 700px;
+    background-image: url("https://furniture-shop-site.netlify.app/static/media/defaultBcg.9a1103b5.jpeg");
+    color: rgb(255, 255, 255);
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, border-bottom 0.3s ease, color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand .brand-link {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+ 
+  .name{
+    height: 30px;
+    width: auto;
+    display: flex;
+    gap: 10px;
+    padding: 3px 10px 5px 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    color: #333;
+  }
+  .navbar.scrolled .brand-link {
+    color: #333;
+  }
+  .navbar.scrolled .name{
+    background-color: black;
+    color: #fff;
+  }
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar.scrolled .nav-link {
+    color: #333;
+  }
+  .home-container {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background: url('https://miro.medium.com/v2/resize:fit:1400/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 700px;
+    overflow: hidden;
+  }
+  
+  .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    z-index: 1;
+  }
+  
+  .home-container * {
+    position: relative;
+    z-index: 2;
+  }
+    
+#hh{
+  
+    margin-top: 200px;
+    margin-left: 480px;
+    margin-right: 480px;
+    background-color: #45444492;
+   
+}
+#bt{
+  
+    height: 60px;
+    width: 170px;
+    background-color: rgb(167,149,125);
+    border: none;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#bt:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+  
+ /* Grid container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Individual grid item */
+  .grid-item {
+    box-shadow: 1px 1px 4px 0px #00000040;
+    background-color: #ce93d8;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Before pseudo-element for numbering */
+  .grid-item:before {
+    content: attr(data-number);
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+  
+  /* Hover effect for pseudo-element */
+  .grid-item:hover:before {
+    opacity: 0;
+  }
+  
+  /* After pseudo-element for gradient */
+  .grid-item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(ellipse farthest-corner at bottom left, #f06292 0%, rgba(0, 0, 0, 0) 80%);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .grid-item:hover:after {
+    background-image: none;
+  }
+  
+  /* Hover scale and z-index effect */
+  .grid-item:hover {
+    transform: scale(1.3);
+    z-index: 3;
+  }
+  
+  /* Image styles */
+  .imgs {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .grid-item:hover .imgs {
+    transform: scale(1.2) rotateY(360deg);
+  }
+  
+  /* Content overlay */
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .grid-item:hover .content {
+    opacity: 1;
+  }
+  
