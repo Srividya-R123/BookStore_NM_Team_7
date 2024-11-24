@@ -34,7 +34,7 @@ const Users = () => {
   const deleteorder = (taskId) => {
     axios.delete(`http://localhost:4000/userorderdelete/${taskId}`);
     window.location.assign('/users');
-    alert('deleted');
+    alert('Deleted');
   };
 
   const fetchUserBikeData = (userId) => {
@@ -77,13 +77,13 @@ const Users = () => {
           </thead>
           <tbody>
             {users.map((item, index) => (
-              <tr key={item._id} style={{ backgroundColor: index % 2 === 0 ? '#f8f9fa' : '#e9ecef' }}>
+              <tr key={item._id} style={{ backgroundColor: 'white', color: 'black' }}>
                 <td>{index + 1}</td>
                 <td>{item._id}</td>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
                 <td>
-                  <button style={{ border: 'none', background: 'none' }}>
+                  <button style={{ border: 'none' }}>
                     <Link to={`/useredit/${item._id}`} style={{ color: 'blue', textDecoration: 'none' }}>
                       <FaEdit />
                     </Link>
@@ -92,12 +92,12 @@ const Users = () => {
                     <FaTrash />
                   </button>{' '}
                   <Button onClick={() => fetchUserBikeData(item._id)} style={{ marginBottom: '12px' }}>
-                    view
+                    View
                   </Button>
                   <div style={{ display: 'flex' }}>
                     {showDetails && (
-                      <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center z-50" >
-                        <div className="bg-gray-900 bg-opacity-50 absolute inset-0"></div>
+                      <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center z-50">
+                        <div className="absolute inset-0"></div>
                         <div className="bg-white p-4 rounded-lg z-10 relative" style={{ maxHeight: '80vh', overflowY: 'scroll' }}>
                           <p className="text-sm text-gray-600">
                             <div className="container mx-auto mt-8" style={{ width: '1350px' }}>
@@ -108,7 +108,6 @@ const Users = () => {
                                   <Card key={item._id} style={{
                                     width: '90%',
                                     marginLeft: '65px',
-                                    backgroundColor: '#fff',
                                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     paddingTop: '15px',

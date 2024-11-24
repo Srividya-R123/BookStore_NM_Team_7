@@ -122,7 +122,7 @@ function Products() {
           >
             <option value="">All Categories</option>
             <option value="Fiction">Fiction</option>
-            <option value="Non-Fiction">Non Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
             <option value="Science">Science</option>
             <option value="Fantasy">Fantasy</option>
             <option value="Mystery">Mystery</option>

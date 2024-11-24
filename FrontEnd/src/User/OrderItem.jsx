@@ -76,7 +76,7 @@ function OrderItem() {
   return (
     <div style={{ backgroundColor: '' }}>
       <Unavbar />
-       <div style={{ display: 'flex ' }} >
+       <div style={{ display: 'flex ',paddingTop:"80px" }} >
          <div className="max-w-md mx-auto mt-8 p-4 border rounded shadow-lg bg-white">
            <h2 className="text-2xl font-semibold" >Your order is almost Done! </h2>
            {/* <p>item name:{item.itemtype}</p> */}

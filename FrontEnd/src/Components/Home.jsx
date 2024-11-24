@@ -84,7 +84,7 @@ const Home = () => {
   <div className="navbar-links">
     <a href="#home" className="nav-link">HOME</a>
     <a href="#categories" className="nav-link">CATEGORIES</a>
-    <a href="#authors" className="nav-link">BOOKS</a>
+    <a href="#authors" className="nav-link">AUTHORS</a>
     <a href="#contact" className="nav-link">CONTACT US</a>
   </div>
   <div className="dropdown-container">
