@@ -354,7 +354,23 @@ app.get('/wishlist', async (req, res) => {
     }
   });
 
-
+  app.get('/item/search', async (req, res) => {
+    try {
+      const { title, author, genre } = req.query;
+  
+      const query = {};
+      if (title) query.title = new RegExp(title, 'i');
+      if (author) query.author = new RegExp(author, 'i');
+      if (genre) query.genre = genre;
+  
+      const results = await ItemModel.find(query);
+      res.json(results);
+    } catch (error) {
+      console.error('Error searching items:', error);
+      res.status(500).send('Server Error');
+    }
+  });
+  
 
 
 

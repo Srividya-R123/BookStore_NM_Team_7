@@ -83,3 +83,65 @@ body {
     pointer-events: none;
     transition: 0.2s;
   }
+  /* Add this to your CSS file */
+
+.custom-navbar {
+  background-color: blue; /* Navbar background color */
+}
+/* Optional: Add custom styles in your List.css */
+.user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.user-info button {
+  color: white;
+  padding: 0;
+  font-size: 18px;
+  text-decoration: none;
+  
+}
+
+.user-info .react-icons {
+  
+  margin-right: 10px;
+  
+}
+
+.table-container {
+  width: 80%;
+  margin: auto;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #9f40b7;
+  color: white;
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-table tr:hover {
+  background-color: #ddd;
+}
+
+
+/* Optional: If you want to avoid overlapping content on smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px; /* Adjust for smaller screen sizes */
+  }
+}

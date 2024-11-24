@@ -10,22 +10,37 @@ import f from '/f.jpg?url';
 import m from '/m.jpg?url';
 import c from '/c.jpg?url';
 import a1 from "/authors/a1.jpg?url";
+import a2 from "/authors/a2.jpg?url";
+import a3 from "/authors/a3.jpg?url";
+import a4 from "/authors/a4.jpg?url";
+import a5 from "/authors/a5.jpg?url";
+import a6 from "/authors/a6.jpg?url";
+import a7 from "/authors/a7.jpg?url";
+import a8 from "/authors/a8.jpg?url";
+import a9 from "/authors/a9.jpg?url";
+import a10 from "/authors/a10.jpg?url";
 const Home = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeCategory, setActiveCategory] = useState('Fiction');
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const handleExploreNowClick = () => {
+    if (isLoggedIn) {
+      navigate('/userhomepage'); // Navigate to user homepage if logged in
+    } else {
+      navigate('/login'); // Navigate to login page if not logged in
+    }
+  };
   const authors = [
-    { name: 'Roddy Doyle', image: a1 }
-    // { name: 'Author Two', image: "" },
-    // { name: 'Author Three', image: "" },
-    // { name: 'Author Four', image: "" },
-    // { name: 'Author Five', image: "" },
-    // { name: 'Author Six', image: "" },
-    // { name: 'Author Seven', image: "" },
-    // { name: 'Author Eight', image: "" },
-    // { name: 'Author Nine', image: "" },
-    // { name: 'Author Ten', image: "" },
+    { name: 'Roddy Doyle', image: a1 },
+    { name: 'Earl Swift', image: a2 },
+    { name: 'J K Rowling', image: a3 },
+    { name: 'Robert Kiyosaki', image: a4},
+    { name: 'Napolean Hill', image: a5 },
+    { name: 'Ben Holden', image: a6},
+    { name: 'Nicola Sanders', image: a7 },
+    { name: 'Timothy C Winegard', image: a8 },
+    { name: 'Walter Isaacson', image: a9},
+    { name: 'Kierstan White', image: a10},
   ];
 
   const categories = [
@@ -87,17 +102,10 @@ const Home = () => {
       <div id="home" className="home-container">
         <p className="book-count">OVER 20,000+ BOOKS AVAILABLE</p>
         <h1 className="title">Find Your Next Favorite Book</h1>
-        <div className="search-container">
-          <select className="dropdown">
-            <option>All Categories</option>
-          </select>
-          <input type="text" placeholder="Enter book title" className="input-field" />
-          <input type="text" placeholder="Enter book author" className="input-field" />
-          <select className="dropdown">
-            <option>Price Range</option>
-          </select>
-          <button className="search-button">Search Now</button>
-        </div>
+        <button className="explore-button" onClick={handleExploreNowClick}>
+          Explore Now
+        </button>
+        
       </div>
 
       {/* Categories Section */}

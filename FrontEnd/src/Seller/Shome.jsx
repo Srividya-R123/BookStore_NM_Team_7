@@ -53,24 +53,24 @@ function Shome() {
   // Define data for the bar chart
   const data = [
    
-    { name: 'Items', value: totalItems, fill: 'blue' }, 
-    { name: 'Orders', value: totalOrders, fill: 'orange' }, 
+    { name: 'Items', value: totalItems, fill: 'purple' }, 
+    { name: 'Orders', value: totalOrders, fill: 'pink' }, 
   ];
   return (
     <div>
         <Snavbar/>
         <br/>
-      <h3 className="text-3xl font-semibold mb-4 text-center" >DashBoard</h3>
-      <Card body style={{ backgroundColor: "wheat", width: "80%", marginLeft: "10%", marginTop: "20px", height: "580px" }}>
+      <h3 className="text-3xl font-semibold mb-4 text-center"  style={{paddingTop:'100px'}}>DashBoard</h3>
+      <Card body style={{ background: 'linear-gradient(to bottom, skyblue, violet)', width: "80%", marginLeft: "10%", marginTop: "20px", height: "580px" }}>
         <div className="flex justify-around items-center p-4">
           
          <Link to="/myproducts" style={{textDecoration:"none"}}>
-          <div className="w-64 h-32 bg-green-500 rounded-lg shadow-md flex flex-col justify-center items-center text-xl font-bold text-gray-800 text-center">
+          <div className="w-64 h-32 bg-purple-500 rounded-lg shadow-md flex flex-col justify-center items-center text-xl font-bold text-gray-800 text-center">
            Items <br /> <br />{totalItems}
          </div>
          </Link>
          <Link to="/orders" style={{textDecoration:"none"}}>
-          <div className="w-64 h-32 bg-yellow-500 rounded-lg shadow-md flex flex-col justify-center items-center text-xl font-bold text-gray-800 text-center">
+          <div className="w-64 h-32 bg-pink-500 rounded-lg shadow-md flex flex-col justify-center items-center text-xl font-bold text-gray-800 text-center">
            Total Orders <br /> <br />{totalOrders}
          </div>
          </Link>
@@ -84,7 +84,7 @@ function Shome() {
           <YAxis />
           <Tooltip   />
           <Legend />
-          <Bar dataKey="value" fill="#8884d8" barSize={50} />
+          <Bar dataKey="value" fill="black" barSize={50} />
           
         </BarChart>
        </div>

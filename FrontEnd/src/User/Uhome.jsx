@@ -12,6 +12,8 @@ const Uhome = () => {
       <div id="home" className="home-container">
         <p className="book-count">OVER 20,000+ BOOKS AVAILABLE</p>
         <h1 className="title">Find Your Next Favorite Book</h1>
+        
+        
       </div>
 
       {/* Best Sellers Section */}
@@ -65,30 +67,19 @@ const Uhome = () => {
 
 const Section = ({ title, children }) => (
   <div>
-    <h2 className="text-center" style={{ fontSize: '50px' }}>
+    <h2 className="text-center" style={{ fontSize: '50px', marginBottom: '20px' }}>
       {title}
     </h2>
-    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+    <div className="card-grid">
       {children.map((book, index) => (
-        <Card
-          key={index}
-          style={{
-            width: '18rem',
-            margin: '20px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-          }}
-        >
-          <Link to="/uproducts">
-            <Card.Img
-              variant="top"
-              src={book.img}
-              style={{ height: '300px', objectFit: 'cover' }}
-            />
+        <div className="card-container" key={index}>
+          <Link to="/uproducts" className="card-link">
+            <div className="card-img-container">
+              <img src={book.img} alt={book.title} />
+              <div className="card-description">{book.title}</div>
+            </div>
           </Link>
-          <Card.Body>
-            <Card.Title className="text-center">{book.title}</Card.Title>
-          </Card.Body>
-        </Card>
+        </div>
       ))}
     </div>
   </div>
